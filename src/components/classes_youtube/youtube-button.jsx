@@ -11,8 +11,8 @@ class YoutubeButton extends Component {
   };
 
   ClickStatus = () => {
-    this.setState((State) => ({
-      isClick: !State.isClick,
+    this.setState((prevState) => ({
+      isClick: !prevState.isClick,
     }));
   };
 
@@ -22,10 +22,19 @@ class YoutubeButton extends Component {
     }));
   };
 
+  deleteCard = (index) => {
+    this.setState((prevState) => ({
+      cards: prevState.cards.filter((_, i) => i !== index),
+    }));
+  };
+
   render() {
     return (
       <>
-        <button className={this.state.isClick ? "subscribed" : "subscribe"} onClick={this.ClickStatus}>
+        <button
+          className={this.state.isClick ? "subscribed" : "subscribe"}
+          onClick={this.ClickStatus}
+        >
           {this.state.isClick ? this.state.text2 : this.state.text1}
         </button>
         {this.state.isClick ? (
@@ -40,7 +49,11 @@ class YoutubeButton extends Component {
 
         <div style={{ display: "flex", flexWrap: "wrap" }}>
           {this.state.cards.map((item, index) => (
-            <CustomCards key={index} />
+            <CustomCards
+              key={index}
+              index={index}
+              deleteCard={this.deleteCard}
+            />
           ))}
         </div>
       </>
