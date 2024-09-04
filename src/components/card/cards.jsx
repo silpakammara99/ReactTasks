@@ -18,7 +18,7 @@ const CustomCards = (prop) => {
         >
           Delete
         </button>
-      </div>
+      </div> 
     </div>
   );
 };
