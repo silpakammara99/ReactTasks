@@ -1,19 +1,21 @@
-//import AnimatedCard from "./animated-cards/ani-cards"
-//import IconComponent from "./icons/icon"
-//import {SkeletonComponent} from "./shimmers/shimmer"
+// import {Greet,Greet1, Greet2} from "./componets creation/greetings/greet"
+// import style from "./componets creation/greetings/greet.module.css"
+// import CustomeCards from "./componets creation/boostrap/bootstrap"
+// import { CardsData } from "./data/cardsdata"
+// import FirstComponent from "./componets creation/boostrap/boostrap-component"
+// import DemoCarousel from "./componets creation/tasks/corousal"
 import "./App.css"
-import Bulb from "./components/bulb-creation/bulb"
+import ServerData from "./components/axios-task/cards-api"
+// import YoutubeButton from "./components/classes_youtube/youtube-button"
 
 
-const App=()=>{
+const App =()=>{
   return(
-  <>
-    {/* <Bulb/> */}
-  {/* <IconComponent/>
-  <SkeletonComponent/>
-  <AnimatedCard/> */}
-  </>
-
+    <>
+   {/* <YoutubeButton/> */}
+   <ServerData/>
+</>
   )
 }
+
 export default App
