@@ -15,21 +15,29 @@ class Bulb extends Component {
     }));
   };
 
+
+
+
   render() {
     return (
-      <div>
-        <div
-          className={`bulb ${this.state.isOn ? 'on' : 'off'}`}
-          onClick={this.toggleLight}
-        >
-          {/* Light bulb representation */}
-        </div>
-        <button onClick={this.toggleLight}>
-          Turn {this.state.isOn ? 'Off' : 'On'}
-        </button>
-      </div>
+
+  <div>
+    <div
+    
+    className={`bulb ${this.state.isOn ? 'on' : 'off'}`}
+     // onClick={this.toggleLight}
+   >
+    
+   </div>
+   <button onClick={this.toggleLight}>
+     Turn {this.state.isOn ? 'Off' : 'On'}
+   </button>
+  </div>
     );
   }
 }
 
 export default Bulb;
+
+
+
