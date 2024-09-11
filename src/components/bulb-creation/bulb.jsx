@@ -1,31 +1,33 @@
-import { Component } from 'react';
-import './Bulb.css'; // Import a CSS file for styling (optional)
+import { Component } from "react";
+import "./Bulb.css";
 
 class Bulb extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isOn: false
+  
+    state = {
+      isOn: false,
     };
-  }
+  
 
   toggleLight = () => {
-    this.setState(prevState => ({
-      isOn: !prevState.isOn
+    this.setState((prevState) => ({
+      isOn: !prevState.isOn,
     }));
   };
 
   render() {
     return (
       <div>
-        <div
-          className={`bulb ${this.state.isOn ? 'on' : 'off'}`}
-          onClick={this.toggleLight}
-        >
-          {/* Light bulb representation */}
+        <div onClick={this.toggleLight}>
+          {
+            this.state.isOn ? (
+              <img src="https://tse4.mm.bing.net/th?id=OIP.565TcOat3QSHtMsuwdW4WwAAAA&pid=Api&P=0&h=180" />
+            ) : (
+              <img src="https://tse4.mm.bing.net/th?id=OIP.g6ELgpMBfTe6728vdTQw0wHaHk&pid=Api&P=0&h=180" />
+            )
+          }
         </div>
         <button onClick={this.toggleLight}>
-          Turn {this.state.isOn ? 'Off' : 'On'}
+          Turn {this.state.isOn ? "Off" : "On"}
         </button>
       </div>
     );

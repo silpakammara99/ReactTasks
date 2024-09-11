@@ -5,7 +5,8 @@
 // import FirstComponent from "./componets creation/boostrap/boostrap-component"
 // import DemoCarousel from "./componets creation/tasks/corousal"
 import "./App.css"
-import ServerData from "./components/axios-task/cards-api"
+// import ServerData from "./components/axios-task/cards-api"
+import Bulb from "./components/bulb-creation/bulb"
 // import YoutubeButton from "./components/classes_youtube/youtube-button"
 
 
@@ -13,7 +14,8 @@ const App =()=>{
   return(
     <>
    {/* <YoutubeButton/> */}
-   <ServerData/>
+   {/* <ServerData/> */}
+<Bulb/>
 </>
   )
 }

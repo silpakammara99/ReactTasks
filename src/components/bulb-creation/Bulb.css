@@ -7,11 +7,11 @@
     transition: background-color 0.3s;
   }
   
-  .bulb.on {
+  /* .bulb.on {
     background-color: yellow;
   }
   
   .bulb.off {
     background-color: gray;
   }
-  
+   */
